@@ -1,0 +1,188 @@
+<!DOCTYPE html><html><head><title>css样式属性</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h4 id="css样式属性">css样式属性</h4>
+
+<p><strong>1.css引入方式</strong></p>
+
+<ul><li>1.行内式(把css样式写在标签里面)</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs clean">&lt;div style=<span class="hljs-string">"属性名:属性值;属性名:属性值;"</span>&gt;&lt;/div&gt;<br>属性名:属性值；...........  多组属性名和属性值之间用过一个分号隔开（英文的符号）<br>弊端:杂  乱  没法公用<br></code></pre>
+
+<ul><li>2.内嵌式（放在头部head标签里面的title标签的下面）</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs clean">&lt;style type=<span class="hljs-string">"text/css"</span>&gt;<br>    选择器{<br>        属性名:属性值;<br>        属性名:属性值;<br>        ...........<br>    }<br>&lt;/style&gt;<br></code></pre>
+
+<ul><li>3.外链式（引入一个外部文件夹种的样式表）</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>  <span class="hljs-attr">href</span>=<span class="hljs-string">"css样式文件的路径地址"</span>/&gt;</span><br></code></pre>
+
+<ul><li>4.导入式（引入一个外部文件夹中的样式表）</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css"><br>      @<span class="hljs-keyword">import</span> <span class="hljs-string">"css样式文件的路径地址"</span><br></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre>
+
+<p>css引入方式引申出来的面试题： <br>
+<strong>面试题一.外链式和导入式相同点和区别？</strong> <br>
+答案： <br>
+相同点：都是引入外部的css外部文件； <br>
+不同点： <br>
+１）link是html的标签，@必须要依赖css样式文件 <br>
+２）加载顺序 <br>
+３）js对dom元素的操作</p>
+
+<p>２．请列举你所知道的css3中新增的选择器? <br>
+css选择符有哪些？哪些属性可以继承？优先级算法如何计算？css3新增伪类有哪些？ <br>
+css选择器有哪些，css3新增伪类有哪些？ <br>
+css选择符有哪些？那些属性可以继承？优先级算法如何计算？css3新增伪类有哪些？ <br>
+请列出至少5个可以继承的css样式 <br>
+请列出至少5个不可以继承的css样式</p>
+
+<p><strong>面试题二：css选择器和权重：</strong> <br>
+1）元素选择符 （基本选择器）</p>
+
+<ul><li>通配符选择器    符号：”*” 权重：0~1;</li>
+<li>标签选择器  通过标签名选中元素 权重:1;</li>
+<li>类选择器（class选择器）符号”.” 权重：10；</li>
+<li>id选择器 符号”#”  权重100；</li>
+</ul>
+
+<p>2）关系选择器</p>
+
+<ul><li>后代选择器：元素之间用空格隔开，例如：dl  dt  span  <br>
+权重：基本选择器的权重之和；</li>
+<li>交集选择器：标签和class选择器或id选择器并在一起，中间没有空格隔开，提高权重覆盖样式； <br>
+权重：基本选择器的权重之和；</li>
+<li>子代选择器：符号’&gt;’ <br>
+权重：基本选择器的权重之和；</li>
+<li>相邻兄弟选择器：符号”+”  <br>
+权重：基本选择器的权重之和；</li>
+<li>兄弟选择器：符号”~” <br>
+权重：基本选择器的权重之和；</li>
+</ul>
+
+<p>3）属性选择器 <br>
+[属性名] <br>
+[属性名=”属性值”]</p>
+
+<p>4）伪类选择器（love hate喜欢讨厌） <br>
+a:link  未访问之前 <br>
+a:visited  访问过 <br>
+a:hover 鼠标移上 <br>
+a:actived  鼠标按下但是没有松开 <br>
+（严格按照这4个书写顺序） <br>
+input:focus 获取焦点（获取光标） <br>
+input:blur 失去焦点（失去光标）</p>
+
+<p>5）伪元素选择器 content=”文字内容” <br>
+：after 在元素之后添加内容 <br>
+：before 在元素之前添加内容</p>
+
+<p><strong>面试题三：css样式属性哪些可以继承？哪些不可以继承？</strong></p>
+
+<p><strong>2.css样式属性A-Z</strong></p>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs arduino"><span class="hljs-built_in">display</span>  元素的显示方式<br><span class="hljs-built_in">position</span> 定位<br></code></pre>
+
+<blockquote>
+  <p><strong>以字母d开头</strong> <br>
+      - display   元素的显示方式 <br>
+      - display:none  让元素隐藏起来 <br>
+      - display:block  让元素显示出来  把元素转化为块级元素 <br>
+      - display:inline  把元素转化为行内元素 <br>
+      - display:inline-block 把元素转化为行内块元素</p>
+  
+  <p><strong>以字母p开头</strong> <br>
+  定位类：position   z-index  top bottom left right</p>
+  
+  <ul><li>position <br>
+  <ul>
+  <li>绝对定位 position:absolute;</li>
+  <li>相对定位 position:relative;</li>
+  <li>固定定位 position:fixed;</li>
+  <li>默认值    position:static; <br>
+  相同点:</li></ul></li>
+  <li>都可以设置上下左右四个方向的位置值（top/bottom/left/right）</li>
+  <li>上下（top/bottom）同时存在，跟着top的值走；</li>
+  <li>左右（left/right）同时存在，跟着left的值走；</li>
+  <li>都可以通过z-index改变层级关系；</li>
+  </ul>
+  
+  <p>不同点： <br>
+  1）是否脱离文档流（漂浮起来） <br>
+  绝对定位 -  脱离文档流，它原本的位置不在，被其他的元素給占领； <br>
+  相对定位 - 没有脱离文档里，它原本的位置还在，其他的元素不能占领它的位置； <br>
+  固定定位 - 脱离文档流，他原本的位置不在，被其他的元素占领； <br>
+  2）参照物 <br>
+  绝对定位 -  有相对定位的父元素（直接）-  html 根元素 <br>
+  相对定位 -  自己本身 <br>
+  固定定位 -  浏览器的窗口</p>
+</blockquote>
+
+<p>面试题：盒子模型 <br>
+css有哪些盒子模型？它们对应的样式是什么？如何让IE以标准模型渲染？ （百度移动）</p>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs xml">美丽说：<br>红色的content元素块面积是多少？<br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><br>    <span class="hljs-selector-class">.content</span>{<br>        <span class="hljs-attribute">background</span>:red;<br>        <span class="hljs-attribute">width</span>:<span class="hljs-number">500px</span>;<br>        <span class="hljs-attribute">height</span>:<span class="hljs-number">500px</span>;<br>        <span class="hljs-attribute">border</span>:<span class="hljs-number">10px</span> solid <span class="hljs-number">#f66</span>;<br>        <span class="hljs-attribute">padding</span>:<span class="hljs-number">50px</span> <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">20px</span>;<br>        <span class="hljs-attribute">margin</span>:<span class="hljs-number">50px</span> <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">20px</span>;<br>    }<br></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre>
+
+<p>介绍一下css的盒子模型？ <br>
+简介盒子模型，并且可以画出盒子模型？ <br>
+什么是css盒模型，在不同浏览器下，是否有不同的表现？如果有，请说明如何解决？ <br>
+简述CSS盒模型？</p>
+
+<ul><li>1.width/height 宽度/高度</li>
+<li>2.padding 内边距</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs avrasm"><span class="hljs-symbol">padding:</span><span class="hljs-number">10</span>px (顺时针)<br>有<span class="hljs-number">1</span>个值：上/右/下/左 <span class="hljs-number">10</span>px<br><br><span class="hljs-symbol">padding:</span><span class="hljs-number">10</span>px <span class="hljs-number">20</span>px<span class="hljs-comment">;</span><br>有<span class="hljs-number">2</span>个值: 上/下 <span class="hljs-number">10</span>px<br>        左/右 <span class="hljs-number">20</span>px<br><br><span class="hljs-symbol">padding:</span><span class="hljs-number">10</span>px <span class="hljs-number">20</span>px <span class="hljs-number">30</span>px<span class="hljs-comment">;</span><br>有<span class="hljs-number">3</span>个值:上     <span class="hljs-number">10</span>px<span class="hljs-comment">;</span><br>       左/右  <span class="hljs-number">20</span>px<span class="hljs-comment">;</span><br><br><span class="hljs-symbol">padding:</span><span class="hljs-number">50</span>px <span class="hljs-number">40</span>px <span class="hljs-number">30</span>px <span class="hljs-number">20</span>px<span class="hljs-comment">;</span><br>有<span class="hljs-number">4</span>个值:上 <span class="hljs-number">50</span>px<br>       右 <span class="hljs-number">40</span>px<br>       下 <span class="hljs-number">30</span>px<br>       左 <span class="hljs-number">20</span>px     <br></code></pre>
+
+<ul><li>3.border 边框 (面试题：如何用css绘制一个三角(不允许使用图片)？- 百度移动) <br>
+border-width  边框的宽度 <br>
+border-style   边框的类型</li>
+</ul>
+
+<pre class="prettyprint hljs-light"><code class="hljs scss">solid  实线<br>dashed 虚线<br>dotted 点状线<br></code></pre>
+
+<p>border-width</p>
+
+<ul><li>4.margin 外边距</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs dts"><span class="hljs-symbol">margin:</span><span class="hljs-number">10</span>px;<br>有<span class="hljs-number">1</span>个值：上/右/下/左 <span class="hljs-number">10</span>px;<br><span class="hljs-symbol"><br>margin:</span><span class="hljs-number">10</span>px <span class="hljs-number">20</span>px;<br>有<span class="hljs-number">2</span>个值：上/下 <span class="hljs-number">10</span>px<br>        左/右 <span class="hljs-number">20</span>px<br><span class="hljs-symbol"><br> margin:</span><span class="hljs-number">10</span>px <span class="hljs-number">20</span>px <span class="hljs-number">30</span>px;<br> 有<span class="hljs-number">3</span>个值:上   <span class="hljs-number">10</span>px<br>        左/右 <span class="hljs-number">20</span>px<br>        下    <span class="hljs-number">30</span>px<br><span class="hljs-symbol"><br> margin:</span><span class="hljs-number">50</span>px <span class="hljs-number">40</span>px <span class="hljs-number">30</span>px <span class="hljs-number">20</span>px; <br> 有<span class="hljs-number">4</span>个值:上 <span class="hljs-number">50</span>px<br>        右 <span class="hljs-number">40</span>px<br>        下 <span class="hljs-number">30</span>px<br>        左 <span class="hljs-number">20</span>px              <br></code></pre>
+
+<p>元素实际宽度=width+padding-left+padding+right+border-left+border-right <br>
+元素的高度=height+padding-top+padding-bottom+border-top+border-bottom</p>
+
+<p>500px +20px+40px+10px+10px=580px <br>
+500px+50px+30px+10px+10px=600px</p>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs xml">box元素块面积是多少？<br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><br>    <span class="hljs-selector-class">.box</span>{<br>        <span class="hljs-attribute">background</span>:red;<br>        <span class="hljs-attribute">width</span>:<span class="hljs-number">480px</span>;<br>        <span class="hljs-attribute">height</span>:<span class="hljs-number">500px</span>;   <br>        <span class="hljs-attribute">border</span>:<span class="hljs-number">10px</span> solid blue;       <br>        <span class="hljs-attribute">border-top</span>:<span class="hljs-number">50px</span>;<br>        <span class="hljs-attribute">margin</span>:<span class="hljs-number">50px</span> <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">20px</span>;<br>    }<br></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre>
+
+<p>用border制作小三角？ <br>
+外边距合并？（并列的div 和嵌套的div）</p></div></body></html>
