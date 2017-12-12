@@ -1,0 +1,344 @@
+<!DOCTYPE html><html><head><title>CSS笔记2</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h2 id="css笔记2">CSS笔记2</h2>
+
+<hr>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#css笔记2">CSS笔记2</a><ul>
+<li><a href="#css遵循规则">【css遵循规则】</a><ul>
+<li><a href="#span-行内元素">【span 行内元素】</a></li>
+<li><a href="#雪碧图精灵图-spritespngspritesjpg">【雪碧图/精灵图】 sprites.png/sprites.jpg</a></li>
+<li><a href="#背景类backgroud">【背景类backgroud】</a></li>
+<li><a href="#基线对齐">【基线对齐】</a></li>
+<li><a href="#腾讯的写法">【腾讯的写法】</a></li>
+<li><a href="#定位">【定位】</a></li>
+</ul>
+</li>
+<li><a href="#title标签里的内容是我们页面显示在浏览器页卡的部分">title标签里的内容是我们页面显示在浏览器页卡的部分;</a><ul>
+<li><a href="#定位-1">【定位】</a></li>
+<li><a href="#相对定位positionrelative">相对定位:position:relative;</a></li>
+<li><a href="#固定定位positionfixed">固定定位:position:fixed</a></li>
+<li><a href="#定位元素绝对定位相对定位固定定位的相同点">定位元素(绝对定位,相对定位,固定定位)的相同点：</a></li>
+<li><a href="#定位元素绝对定位相对定位固定定位的不同点">定位元素(绝对定位,相对定位,固定定位)的不同点:</a></li>
+<li><a href="#文字内容对齐的方式">【文字内容对齐的方式】</a></li>
+<li><a href="#元素居中">【元素居中】</a></li>
+</ul>
+</li>
+<li><a href="#快捷键">【快捷键】</a></li>
+<li><a href="#css遵循规则-1">【css遵循规则】</a><ul>
+<li><a href="#span-行内元素-1">【span 行内元素】</a></li>
+<li><a href="#雪碧图精灵图-spritespngspritesjpg-1">【雪碧图/精灵图】 sprites.png/sprites.jpg</a></li>
+<li><a href="#背景类backgroud-1">【背景类backgroud】</a></li>
+<li><a href="#基线对齐-1">【基线对齐】</a></li>
+<li><a href="#腾讯的写法-1">【腾讯的写法】</a></li>
+<li><a href="#定位-2">【定位】</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<hr>
+
+
+
+<h3 id="css遵循规则">【css遵循规则】</h3>
+
+<p>就近原则:后面的代码会覆盖前面的代码; <br>
+默认的重置样式放在样式表的最上面; <br>
+reset.min.css 重置样式表</p>
+
+
+
+<h4 id="span-行内元素">【span 行内元素】</h4>
+
+<blockquote>
+  <p>1)设宽度和高度属性不起作用,要想起作用，需要把它转为块级元素 display:block <br>
+  2)设置padding/margin的上下浏览器可以识别但是不起作用,左右起作用</p>
+</blockquote>
+
+
+
+<h4 id="雪碧图精灵图-spritespngspritesjpg">【雪碧图/精灵图】 sprites.png/sprites.jpg</h4>
+
+<p>多个小图片合并在一张大图上 <br>
+icons.png  小图标的集合 <br>
+<em>*</em> 雪碧图 background-position  都取负值; 默认的参考坐标 是雪碧图的左上角的点;</p>
+
+
+
+<h4 id="背景类backgroud">【背景类backgroud】</h4>
+
+<blockquote>
+  <p>1)backgroud-color 背景颜色 <br>
+  2)background-image 背景图片 <br>
+   3)background-repeat 背景平铺的方式 <br>
+    repeat x/y平铺(默认值) <br>
+    no-repeat 不平铺 <br>
+    repeat-x 表示x轴平铺 <br>
+    repeat-y 表示y轴平铺 <br>
+  4)background-position 背景的位置</p>
+</blockquote>
+
+
+
+<h4 id="基线对齐">【基线对齐】</h4>
+
+<ul><li>vertical-align  常用在一个小图标和文字内容在一行对齐显示 <br>
+(图片:插入图片 img 单独用一个标签包起来)</li>
+</ul>
+
+
+
+<h4 id="腾讯的写法">【腾讯的写法】</h4>
+
+<ul><li>用height和line-height 也可以实现图片和文字的对齐显示(图片:背景图片 background-image)</li>
+</ul>
+
+
+
+<h4 id="定位">【定位】</h4>
+
+<ul><li>绝对定位(position:absloute)</li>
+<li>元素会脱离文档流,它需要找一个相对的参照物(position:relative),一般情况参照物是直接父元素,如果直接父元素也没有- - - -position:relative,它会继续往上查找,只到找到最外层的根元素html为止;</li>
+<li>定位元素可以通过z-index改变层级,值越大,层级越高,越在上面;</li>
+</ul>
+
+<hr>
+
+<ul><li>webstorm重命名快捷键: <br>
+shift+F6</li>
+</ul>
+
+
+
+<h3 id="title标签里的内容是我们页面显示在浏览器页卡的部分">title标签里的内容是我们页面显示在浏览器页卡的部分;</h3>
+
+
+
+<h4 id="定位-1">【定位】</h4>
+
+<p>绝对定位:position:absolute;</p>
+
+<blockquote>
+  <p>1)绝对定位元素会脱离文档流(元素漂浮起来了),而且它的位置被其他的元素占领;</p>
+  
+  <p>2)通过上下左右(top/bottom/left/right)四个方向指定元素的位置;</p>
+  
+  <p>3)方位同时有上下(top/bottom),跟着top的值走; <br>
+    方位同时有左右(left/right),跟着left的值走;</p>
+  
+  <p>4)绝对定位元素一定要有相对定位的参照物(加在直接父元素上position:relative),如果父元素没有相对参照物，它会一层一层往上查找,直到找到最外层的根元素(html)为止;</p>
+  
+  <p>5)通过z-index能改变它的层级关系;</p>
+</blockquote>
+
+
+
+<h4 id="相对定位positionrelative">相对定位:position:relative;</h4>
+
+<blockquote>
+  <p>1)相对定位不会脱离文档流,它原本的位置还在,不会其他的元素占领; <br>
+  2)通过上下左右(top/bottom/left/right)四个方向指定元素的位置; <br>
+  3)方位同时有上下(top/bottom),跟着top的值走; <br>
+    方位同时有左右(left/right),跟着left的值走; <br>
+  4)相对定位的参照物:是它自己本身; <br>
+  5)通过z-index能改变它的层级关系;</p>
+</blockquote>
+
+
+
+<h4 id="固定定位positionfixed">固定定位:position:fixed</h4>
+
+<blockquote>
+  <p>1)绝对定位元素会脱离文档流(元素漂浮起来了),而且它的位置被其他的元素占领; <br>
+  2)会固定在位置上,并不会随着滚动条的滚动而滚动; <br>
+  3)通过上下左右(top/bottom/left/right)四个方向指定元素的位置; <br>
+  4)方位同时有上下(top/bottom),跟着top的值走; <br>
+    方位同时有左右(left/right),跟着left的值走; <br>
+  5)固定参照物:浏览器的窗口 <br>
+  6)通过z-index能改变它的层级关系;</p>
+</blockquote>
+
+
+
+<h4 id="定位元素绝对定位相对定位固定定位的相同点">定位元素(绝对定位,相对定位,固定定位)的相同点：</h4>
+
+<blockquote>
+  <p>1)都可以通过top/bottom/left/right四个方向控制它的位置; <br>
+  2)都可以通过z-index改变元素的层级关系;</p>
+</blockquote>
+
+
+
+<h4 id="定位元素绝对定位相对定位固定定位的不同点">定位元素(绝对定位,相对定位,固定定位)的不同点:</h4>
+
+<blockquote>
+  <p>1.是否脱离文档流; <br>
+  2.参照物;</p>
+</blockquote>
+
+<ul><li>nav 导航栏  nav-wrap</li>
+<li>header 里面有一个网站的logo</li>
+</ul>
+
+
+
+<h4 id="文字内容对齐的方式">【文字内容对齐的方式】</h4>
+
+<ul><li>text-align:center   居中对齐</li>
+<li>text-align:left     左对齐</li>
+<li>text-align:right    右对齐</li>
+</ul>
+
+
+
+<h4 id="元素居中">【元素居中】</h4>
+
+<ul><li>块级水平居中:margin:0 auto;</li>
+<li>文字内容水平居中:text-align:center;</li>
+<li>文字内容垂直居中：height和line-height的值设一样的值;</li>
+</ul>
+
+<hr>
+
+<p>打开设计稿:直接把psd的设计稿拖到ps中松开即可;</p>
+
+
+
+<h3 id="快捷键">【快捷键】</h3>
+
+<blockquote>
+  <p>1)ctrl+1  设计稿100%显示;</p>
+  
+  <p>2)ctrl+0  设计稿进来的状态;</p>
+  
+  <p>3)按住空格键 出现一个小手 边按住空格键 边拖动设计稿;</p>
+  
+  <p>4)设计稿放大/缩小  alt+鼠标滚动   还可以  ctrl +/- 放大/缩小</p>
+  
+  <p>5)设计稿破坏,回到设计稿原本的状态: 窗口 - 历史记录</p>
+  
+  <p>6)移动工具 - 在英文输入法状态下 V  自动选择移动要勾上(图层)</p>
+  
+  <p>7)按住ctrl 点击图层空白的区域 会出现一个虚线框  在窗口下有一个信息(F8)面板可以看到虚线框的大小  logo 176*52 <br>
+   在虚线框的基础上 ctrl+C(复制) ctrl+N(新建图层)  ctrl+V(粘贴) <br>
+   ctrl+shift+alt+S 同时按住 表示图片另存为  jpg png8 png24(背景透明)</p>
+  
+  <p>8)如果图层有设计效果 -&gt; 点到图层上鼠标右键 -&gt;栅格化图层样式 -&gt;变成一个纯图层 <br>
+  然后根据上面的操作 ctrl+C ctrl+N ctrl+v  ctrl+shift+alt+S 可以把图层保存下来</p>
+  
+  <p>9)ctrl+N 新建图层  sprites 雪碧图/精灵图</p>
+  
+  <p>10)填充前景色 alt+delete <br>
+     填充背景色 ctrl+delete</p>
+  
+  <p>11)标尺 ctrl+R 从标尺上可以拉出参考线</p>
+  
+  <p>12)按住shift键同时选中多个图层  ctrl+E 合并图层</p>
+  
+  <p>13)取消虚线框的选区  ctrl+D</p>
+  
+  <p>14)英文状态输入下 T  文字</p>
+  
+  <p>15)取消被选中的状态 ctrl+enter</p>
+  
+  <p>16)选区 M (英文状态输入法下)</p>
+  
+  <p>17)选区的虚线框查看元素的大小尺寸 -&gt;窗口 -&gt;信息</p>
+</blockquote>
+
+<ul><li>href=”javascript:;   禁止a标签的默认链接跳转的行为</li>
+</ul>
+
+<hr>
+
+
+
+<h3 id="css遵循规则-1">【css遵循规则】</h3>
+
+<ul><li>就近原则:后面的代码会覆盖前面的代码;</li>
+<li>默认的重置样式放在样式表的最上面;</li>
+<li>reset.min.css 重置样式表</li>
+</ul>
+
+
+
+<h4 id="span-行内元素-1">【span 行内元素】</h4>
+
+<blockquote>
+  <p>1)设宽度和高度属性不起作用,要想起作用，需要把它转为块级元素 display:block <br>
+  2)设置padding/margin的上下浏览器可以识别但是不起作用,左右起作用</p>
+</blockquote>
+
+
+
+<h4 id="雪碧图精灵图-spritespngspritesjpg-1">【雪碧图/精灵图】 sprites.png/sprites.jpg</h4>
+
+<ul><li>多个小图片合并在一张大图上</li>
+<li>icons.png  小图标的集合</li>
+<li><em>*</em> 雪碧图 background-position  都取负值; 默认的参考坐标 是雪碧图的左上角的点;</li>
+</ul>
+
+
+
+<h4 id="背景类backgroud-1">【背景类backgroud】</h4>
+
+<blockquote>
+  <p>1)backgroud-color 背景颜色 <br>
+  2)background-image 背景图片 <br>
+  3)background-repeat 背景平铺的方式</p>
+  
+  <ul><li>repeat x/y平铺(默认值)</li>
+  <li>no-repeat 不平铺</li>
+  <li>repeat-x 表示x轴平铺</li>
+  <li>repeat-y 表示y轴平铺</li>
+  </ul>
+  
+  <p>4)background-position 背景的位置</p>
+</blockquote>
+
+
+
+<h4 id="基线对齐-1">【基线对齐】</h4>
+
+<ul><li>vertical-align  常用在一个小图标和文字内容在一行对齐显示</li>
+<li>(图片:插入图片 img 单独用一个标签包起来)</li>
+</ul>
+
+
+
+<h4 id="腾讯的写法-1">【腾讯的写法】</h4>
+
+<ul><li>用height和line-height 也可以实现图片和文字的对齐显示(图片:背- 景图片 background-image)</li>
+</ul>
+
+
+
+<h4 id="定位-2">【定位】</h4>
+
+<ul><li>绝对定位(position:absloute)</li>
+<li>元素会脱离文档流,它需要找一个相对的参照物(position:relative),一般情况参照物是直接父元素,如果直接父元素也没有position:relative,它会继续往上查找,只到找到最外层的根元素html为止;</li>
+<li>定位元素可以通过z-index改变层级,值越大,层级越高,越在上面;</li>
+</ul>
+
+<p>【display】</p>
+
+<ul><li>display:none;  让元素隐藏起来</li>
+<li>display:block; 让元素显示</li>
+</ul></div></body></html>
